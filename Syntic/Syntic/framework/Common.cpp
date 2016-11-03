@@ -10,7 +10,7 @@ public:
 	virtual bool				IsInitialized(void) const;
 	virtual void				Frame(void);
 	
-	//virtual void				Printf(const char* fmt, ...);
+	virtual void				Printf(const char* fmt, ...);
 
 private:
 	bool bIsInitialized = false;
@@ -43,4 +43,12 @@ bool synticCommonLocal::IsInitialized(void) const
 
 void synticCommonLocal::Frame(void)
 {
+}
+
+void synticCommonLocal::Printf(const char * fmt, ...)
+{
+	va_list args;
+	va_start(args, fmt);
+	vprintf(fmt, args);
+	va_end(args);
 }

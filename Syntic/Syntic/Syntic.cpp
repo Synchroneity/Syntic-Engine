@@ -10,5 +10,6 @@ int main()
 #endif
 {
 	common->Init();
+	renderer->Init();
 	return 0;
 }
