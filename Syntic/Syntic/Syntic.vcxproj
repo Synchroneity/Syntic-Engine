@@ -151,6 +151,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework\Common.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Syntic.h" />
   </ItemGroup>
   <ItemGroup>
@@ -158,8 +159,13 @@
     <ClCompile Include="Syntic.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="icon.png" />
+    <Image Include="icon2.ico" />
     <Image Include="small.ico" />
     <Image Include="Syntic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Syntic.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
