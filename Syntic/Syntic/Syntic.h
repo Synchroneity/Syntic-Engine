@@ -4,6 +4,6 @@
 
 #include "framework/Common.h"
 
-#ifdef WIN32
+#ifdef _WINDOWS
 #include <Windows.h>
 #endif
