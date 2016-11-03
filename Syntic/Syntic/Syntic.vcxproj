@@ -150,9 +150,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="framework\Common.h" />
     <ClInclude Include="Syntic.h" />
   </ItemGroup>
