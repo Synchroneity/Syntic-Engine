@@ -15,12 +15,12 @@ int main(int argc, char * argv[])
 #endif
 	common->Init();
 	renderer->Init(&argc, argv);
-
+	common->Printf("Entering main game loop\n");
 	while (renderer->ShouldClose() == 0 && !common->WasErrorThrown())
 	{
 		common->Frame();
 		renderer->Render();
-		common->Error(ERR_FATAL, "I'm an error that crashes the game :D\n");
+		common->Error(ERR_FATAL, "such a troublemaker");
 	}
 
 	if (common->WasErrorThrown())

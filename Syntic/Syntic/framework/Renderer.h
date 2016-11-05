@@ -1,4 +1,5 @@
 #pragma once
+#include "../Syntic.h"
 
 class synticRenderer {
 public:
@@ -12,5 +13,6 @@ public:
 	virtual bool				ShouldClose(void) = 0;
 
 };
+
 
 extern synticRenderer * renderer;

@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Framework\Renderer">
       <UniqueIdentifier>{d07cb647-734e-4f21-926e-c7da15f519c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Libs">
+      <UniqueIdentifier>{7539117a-a637-4be3-a182-091ff674c028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Libs\imgui">
+      <UniqueIdentifier>{36738ea2-a0d5-4012-93c8-14b4678a0fa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Syntic.h">
@@ -36,6 +42,24 @@
     <ClInclude Include="framework\RenderSettings.h">
       <Filter>Source Files\Framework\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="libs\imgui\imconfig.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\imgui.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\imgui_internal.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\stb_rect_pack.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\stb_textedit.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\imgui\stb_truetype.h">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Syntic.cpp">
@@ -46,6 +70,15 @@
     </ClCompile>
     <ClCompile Include="framework\Renderer.cpp">
       <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui\imgui.cpp">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui\imgui_demo.cpp">
+      <Filter>Source Files\Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\imgui\imgui_draw.cpp">
+      <Filter>Source Files\Libs\imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

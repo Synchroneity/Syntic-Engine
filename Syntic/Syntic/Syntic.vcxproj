@@ -159,12 +159,21 @@
     <ClInclude Include="framework\Common.h" />
     <ClInclude Include="framework\Renderer.h" />
     <ClInclude Include="framework\RenderSettings.h" />
+    <ClInclude Include="libs\imgui\imconfig.h" />
+    <ClInclude Include="libs\imgui\imgui.h" />
+    <ClInclude Include="libs\imgui\imgui_internal.h" />
+    <ClInclude Include="libs\imgui\stb_rect_pack.h" />
+    <ClInclude Include="libs\imgui\stb_textedit.h" />
+    <ClInclude Include="libs\imgui\stb_truetype.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Syntic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework\Common.cpp" />
     <ClCompile Include="framework\Renderer.cpp" />
+    <ClCompile Include="libs\imgui\imgui.cpp" />
+    <ClCompile Include="libs\imgui\imgui_demo.cpp" />
+    <ClCompile Include="libs\imgui\imgui_draw.cpp" />
     <ClCompile Include="Syntic.cpp" />
   </ItemGroup>
   <ItemGroup>

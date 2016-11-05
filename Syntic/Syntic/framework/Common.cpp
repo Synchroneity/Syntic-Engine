@@ -83,6 +83,7 @@ void synticCommonLocal::VPrintf(const char * fmt, va_list args)
 
 void synticCommonLocal::Error(int level, const char * fmt, ...)
 {
+	common->Printf("ERROR: ");
 	va_list args;
 	va_start(args, fmt);
 	common->VPrintf(fmt, args);
