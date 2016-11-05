@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Framework">
       <UniqueIdentifier>{3883d8c8-46aa-4f36-b16c-d70b7f63ad48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Framework\Renderer">
+      <UniqueIdentifier>{d07cb647-734e-4f21-926e-c7da15f519c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Syntic.h">
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="framework\Renderer.h">
       <Filter>Source Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\RenderSettings.h">
+      <Filter>Source Files\Framework\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -60,5 +66,8 @@
     <ResourceCompile Include="Syntic.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
