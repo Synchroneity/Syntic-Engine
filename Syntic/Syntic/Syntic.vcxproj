@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework\Common.h" />
+    <ClInclude Include="framework\Console.h" />
     <ClInclude Include="framework\Renderer.h" />
     <ClInclude Include="framework\RenderSettings.h" />
     <ClInclude Include="libs\imgui\imconfig.h" />
@@ -170,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework\Common.cpp" />
+    <ClCompile Include="framework\Console.cpp" />
     <ClCompile Include="framework\Renderer.cpp" />
     <ClCompile Include="libs\imgui\imgui.cpp" />
     <ClCompile Include="libs\imgui\imgui_demo.cpp" />

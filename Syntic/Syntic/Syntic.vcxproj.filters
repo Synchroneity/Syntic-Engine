@@ -60,6 +60,9 @@
     <ClInclude Include="libs\imgui\stb_truetype.h">
       <Filter>Source Files\Libs\imgui</Filter>
     </ClInclude>
+    <ClInclude Include="framework\Console.h">
+      <Filter>Source Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Syntic.cpp">
@@ -79,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="libs\imgui\imgui_draw.cpp">
       <Filter>Source Files\Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Console.cpp">
+      <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
