@@ -1,6 +1,6 @@
 #pragma once
 
-#define MAX_DELTA_TIMES_TO_STORE 60
+#define MAX_DELTA_TIMES_TO_STORE 30
 
 class sTimer
 {
