@@ -1,0 +1,8 @@
+#pragma once
+
+enum {
+	ASSET_IMAGE = 0,
+	ASSET_MATERIAL,
+	ASSET_MODEL,
+	ASSET_SEANIM
+};

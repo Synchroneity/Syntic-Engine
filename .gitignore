@@ -9,3 +9,5 @@
 /Syntic/packages
 /Syntic/linker/Debug
 /Syntic/Debug
+/Syntic/linker/x64/Debug
+/Syntic/Shared/x64/Debug/Shared.tlog
