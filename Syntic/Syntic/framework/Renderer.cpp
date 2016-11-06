@@ -145,7 +145,7 @@ void synticRendererLocal::Init(int *argc, char* argv[], int w, int h)
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL 
 
-	window = glfwCreateWindow(640, 480, VERSION_STR, NULL, NULL);
+	window = glfwCreateWindow(w, h, VERSION_STR, NULL, NULL);
 	if (window == NULL) {
 		common->Error(ERR_FATAL, "Failed to open GLFW window\n");
 		glfwTerminate();

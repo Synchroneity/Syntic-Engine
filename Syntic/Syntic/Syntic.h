@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <time.h>
+#include <conio.h>
 
 
 #include <GL/glew.h>
@@ -22,6 +24,7 @@
 
 #include "framework/Common.h"
 #include "framework/Renderer.h"
+#include "framework/Timer.h"
 
 #include "libs/imgui/imgui.h"
 

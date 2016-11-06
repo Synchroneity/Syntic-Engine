@@ -20,7 +20,9 @@ int main(int argc, char * argv[])
 	{
 		common->Frame();
 		renderer->Render();
-		common->Error(ERR_FATAL, "such a troublemaker");
+		common->Printf("Delta Time: %f\nTick: %d\nFPS: %f\n", common->GetDeltaTime(), common->GetTicks(), common->GetFPS());
+		if(common->GetTicks() > 120)
+			common->Error(ERR_FATAL, "I'm such a troublemaker. I crashed the game because it ran for more than 15 ticks :D\n");
 	}
 
 	if (common->WasErrorThrown())

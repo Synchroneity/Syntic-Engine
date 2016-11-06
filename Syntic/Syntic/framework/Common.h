@@ -1,4 +1,5 @@
 #pragma once
+#include "../Syntic.h"
 
 #ifdef _DEBUG
 #define BUILD_STR "dev"
@@ -8,7 +9,7 @@
 
 #define VERSION_STR "Syntic - "##BUILD_STR
 
-typedef enum {
+enum {
 	ERR_MINOR,
 	ERR_FATAL
 };
@@ -31,6 +32,9 @@ public:
 	virtual const char*			GetErrorStr() = 0;
 
 	virtual int					GetTicks(void) = 0;
+
+	virtual double				GetDeltaTime(void) = 0;
+	virtual double				GetFPS(void) = 0;
 
 	//int gameTicks = 0;
 };

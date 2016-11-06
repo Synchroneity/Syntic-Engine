@@ -20,9 +20,14 @@ public:
 
 	virtual int					GetTicks(void);
 
-	int gameTicks = 0;
+	virtual double				GetDeltaTime(void);
+	virtual double				GetFPS(void);
+
+	unsigned int gameTicks = 0;
 	bool errorThrown = false;
 	char errstr[512];
+
+	sTimer	g_timer;
 
 private:
 	bool bIsInitialized = false;
@@ -37,16 +42,21 @@ synticCommonLocal::synticCommonLocal(void)
 
 void synticCommonLocal::Init(int argc, const char ** argv, const char * cmdline)
 {
+#if defined(_WINDOWS)
 	if (AllocConsole())
 	{
 		freopen("CONOUT$", "w", stdout);
 		freopen("CONOUT$", "w", stderr);
 		freopen("CONIN$", "r", stdin);
 	}
+#endif
 	common->Printf(VERSION_STR"\n");
 	common->Printf("Starting...\n");
 	common->Printf("=========== common->Init() ===========\n");
+
 	bIsInitialized = true;
+	common->Error(ERR_MINOR, "I am a random error that doesn't crash the game.\n");
+	common->Error(ERR_MINOR, "Another one\n");
 	common->Printf("Finished initializing common\n");
 }
 
@@ -65,6 +75,7 @@ bool synticCommonLocal::IsInitialized(void) const
 
 void synticCommonLocal::Frame(void)
 {
+	g_timer.UpdateTime();
 	gameTicks++;
 }
 
@@ -108,4 +119,14 @@ const char * synticCommonLocal::GetErrorStr()
 int synticCommonLocal::GetTicks(void)
 {
 	return gameTicks;
+}
+
+double synticCommonLocal::GetDeltaTime(void)
+{
+	return g_timer.GetTimePassed();
+}
+
+double synticCommonLocal::GetFPS(void)
+{
+	return g_timer.GetFPS();
 }

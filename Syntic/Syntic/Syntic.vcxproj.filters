@@ -63,6 +63,9 @@
     <ClInclude Include="framework\Console.h">
       <Filter>Source Files\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="framework\Timer.h">
+      <Filter>Source Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Syntic.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files\Libs\imgui</Filter>
     </ClCompile>
     <ClCompile Include="framework\Console.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\Timer.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
