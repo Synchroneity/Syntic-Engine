@@ -19,10 +19,10 @@ void PrintAppInfo()
 
 sftHeader_s ReadHeader(FILE * f)
 {
-	char magic[7];
+	char magic[sizeof(SFMagic)];
 	unsigned char version;
 	unsigned short fileCount;
-	fread(magic, 7, sizeof(char), f);
+	fread(magic, sizeof(SFMagic), sizeof(char), f);
 	//fseek(f, 6, SEEK_SET);
 	fread(&version, 1, sizeof(unsigned char), f);
 	fread(&fileCount, 1, sizeof(unsigned short), f);
