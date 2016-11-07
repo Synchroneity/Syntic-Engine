@@ -1,14 +1,17 @@
-#pragma once
-#include <iostream>
-#include "syntic_AssetTypes.h"
+*.sf specs
+
+*.sf file contains multiple files compressed with zlib
+
+There is no information stored except for compressed and uncompressed size of the files
+The rest of the info is in the *.sft file
 
 typedef struct {
-	bool processed;	// used only in linker
 	unsigned long compressedSize;
 	unsigned long uncompressedSize; // a single file can be max 4GB... too much? lol
 	unsigned char *compressedFile;
-	unsigned char *uncompressedFile; // used only in linker
 } sfFile_s;
+
+*.sft file contains information for each file with offsets, etc.
 
 typedef struct {
 	char magic[6];
@@ -18,7 +21,7 @@ typedef struct {
 
 typedef struct {
 	char name[256];
-	unsigned char type; //fit that shit in a byte
+	unsigned char type;	// the type of the file, used to optimize asset workflow.
 	unsigned long offset;
 } sftFileEntry_s;
 

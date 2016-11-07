@@ -88,11 +88,12 @@ int main(int argc, char * argv[])
 			fread((void *)cmpdata, sizeof(unsigned char), csize, in);
 			char *uc = new char[size];
 			uncompress((Bytef *)uc, &size, cmpdata, csize);
-			std::cout << uc;
+			std::cout << uc << std::endl << "Size: " << size;
 			std::cin >> k;
 		}
 	}
 
-    return 0;
+
+	return 0;
 }
 

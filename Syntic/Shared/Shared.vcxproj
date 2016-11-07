@@ -113,6 +113,9 @@
     <ClInclude Include="SF.h" />
     <ClInclude Include="syntic_AssetTypes.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="SF Specs.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
