@@ -2,6 +2,9 @@
 #include <iostream>
 #include "syntic_AssetTypes.h"
 
+const unsigned char SFVersion = 1;
+const char SFMagic[] = "SynSFT";
+
 typedef struct {
 	bool processed;	// used only in linker
 	unsigned long compressedSize;
@@ -11,7 +14,7 @@ typedef struct {
 } sfFile_s;
 
 typedef struct {
-	char magic[6];
+	char magic[sizeof(SFMagic)];     // SynSFT
 	unsigned char version;
 	unsigned short fileCount;
 } sftHeader_s;

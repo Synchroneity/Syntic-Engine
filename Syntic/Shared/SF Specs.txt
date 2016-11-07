@@ -14,7 +14,7 @@ typedef struct {
 *.sft file contains information for each file with offsets, etc.
 
 typedef struct {
-	char magic[6];
+	char magic[6];     // SynSFT
 	unsigned char version;
 	unsigned short fileCount;
 } sftHeader_s;

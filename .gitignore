@@ -11,3 +11,6 @@
 /Syntic/Debug
 /Syntic/linker/x64/Debug
 /Syntic/Shared/x64/Debug/Shared.tlog
+/Syntic/linker/common.sf
+/Syntic/linker/common.sft
+/Syntic/SFInfo/Debug

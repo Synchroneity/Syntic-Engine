@@ -56,42 +56,60 @@ void PrintUsage()
 	printline("test");
 }
 
+void WriteSFTHeader(FILE * f, unsigned short count)
+{
+	fwrite((void *)SFMagic, sizeof(SFMagic), sizeof(char), f);
+	fwrite((void *)&SFVersion, 1, sizeof(unsigned char), f);
+	fwrite((void *)&count, 1, sizeof(count), f);
+	//count = _byteswap_ushort(count);
+}
+
+void WriteSFTFileEntry(FILE * f, sftFileEntry_s ft)
+{
+	fwrite((void *)ft.name, sizeof(ft.name), 1, f);
+	fwrite((void *)&ft.type, 1, sizeof(unsigned char), f);
+	fwrite((void *)&ft.offset, 1, sizeof(unsigned long), f);
+}
+
 int main(int argc, char * argv[])
 {
 	printline("== Syntic Linker ==" << std:: endl);
 	printline("using zlib version " << zlibVersion());
 	char k;
 	if (argc < 2) PrintUsage();
+
+	unsigned short fileCount = argc - 1;
+	char respath[512];
+	char respatht[512];
+	//sprintf_s(respath, "%s.sf", argv[i]);
+	sprintf_s(respath, "%s.sf", "common");
+	sprintf_s(respatht, "%s.sft", "common");
+	FILE *out;
+	FILE *outt;
+	fopen_s(&out, respath, "wb");
+	fopen_s(&outt, respatht, "wb");
+	WriteSFTHeader(outt, fileCount);
 	for (int i = 1; i < argc; i++)
 	{
 		sfFile_s f = ProcessFile(argv[i]);
-		if(f.processed)
+		sftFileEntry_s ft;
+		strcpy_s(ft.name, argv[i]);//strcat_s(ft.name, argv[i]);
+		ft.offset = ftell(out);
+		ft.type = ASSET_RAWFILE;
+		WriteSFTFileEntry(outt, ft);
+		if (f.processed)
 		{
-			char respath[512];
-			sprintf_s(respath, "%s.sf", argv[i]);
 			printf("Writing to %s\n", respath);
-			FILE *out;
-			fopen_s(&out, respath, "wb");
 			fwrite((void *)&f.uncompressedSize, 1, sizeof(f.uncompressedSize), out);
 			fwrite((void *)&f.compressedSize, 1, sizeof(f.compressedSize), out);
 			fwrite((void *)f.compressedFile, f.compressedSize, 1, out);
-			fclose(out);
-			out = NULL;
-			FILE *in;
-			fopen_s(&in, respath, "rb");
-			unsigned long size = 0;
-			unsigned long csize = 0;
-			fread((void *)&size, 1, sizeof(unsigned long), in);
-			fread((void *)&csize, 1, sizeof(unsigned long), in);
-			printline("Size: " << size << std::endl << "CSize: " << csize);
-			unsigned char *cmpdata = new unsigned char[csize];
-			fread((void *)cmpdata, sizeof(unsigned char), csize, in);
-			char *uc = new char[size];
-			uncompress((Bytef *)uc, &size, cmpdata, csize);
-			std::cout << uc << std::endl << "Size: " << size;
-			std::cin >> k;
+			
 		}
 	}
+	fclose(out);
+	fclose(outt);
+	out = NULL;
+	outt = NULL;
 
 
 	return 0;

@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{18AF0A66
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "Shared\Shared.vcxproj", "{F48D78E3-1DB6-45E0-AD6F-5B066205B724}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFInfo", "SFInfo\SFInfo.vcxproj", "{1FB362F7-7CFA-49EE-A414-A271F47717C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -48,11 +50,20 @@ Global
 		{F48D78E3-1DB6-45E0-AD6F-5B066205B724}.Release|x64.Build.0 = Release|x64
 		{F48D78E3-1DB6-45E0-AD6F-5B066205B724}.Release|x86.ActiveCfg = Release|Win32
 		{F48D78E3-1DB6-45E0-AD6F-5B066205B724}.Release|x86.Build.0 = Release|Win32
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Debug|x64.ActiveCfg = Debug|x64
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Debug|x64.Build.0 = Debug|x64
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Debug|x86.Build.0 = Debug|Win32
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Release|x64.ActiveCfg = Release|x64
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Release|x64.Build.0 = Release|x64
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Release|x86.ActiveCfg = Release|Win32
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{845EDA17-0B58-419D-861D-FC0379AD23C5} = {18AF0A66-0447-4AE1-9B56-78C4BE115391}
+		{1FB362F7-7CFA-49EE-A414-A271F47717C6} = {18AF0A66-0447-4AE1-9B56-78C4BE115391}
 	EndGlobalSection
 EndGlobal
